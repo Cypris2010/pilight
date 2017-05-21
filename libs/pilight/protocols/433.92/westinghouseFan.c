@@ -11,7 +11,7 @@
 #if !defined(MODULE) && !defined(_WIN32)
 __attribute__((weak))
 #endif
-void dummyInit(void) {
+void westinghouseFanInit(void) {
     protocol_register(&westinghouseFan);
     protocol_set_id(westinghouseFan, "westinghouseFan");
     protocol_device_add(westinghouseFan, "westinghouseFan", "Westinghouse Fan protocol");
@@ -20,7 +20,7 @@ void dummyInit(void) {
  
 #if defined(MODULE) && !defined(_WIN32)
 void compatibility(struct module_t *module) {
-    module->name = "westinghouseFan";
+    module->name = "Westinghouse Fan";
     module->version = "0.1";
     module->reqversion = "5.0";
     module->reqcommit = NULL;
